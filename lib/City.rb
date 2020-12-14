@@ -13,15 +13,14 @@ class City
         @@all
     end
 
-    def zoos
-       #zoo_animals = Animal.all.select{|animal| animal.city == self}
-       #zoo_animals.collect{|animal| animal.zoo}
-    end
-    #array of all the zoo instances that a specific instance of a city has
-
     def my_animals
         Animal.all.select{|animal| animal.city == self}
     end
+
+    def zoos
+       my_animals.collect{|animal| animal.zoo}
+    end
+    #array of all the zoo instances that a specific instance of a city has
 
     def animals
         my_animals.map{|animal| animal.species}.uniq
@@ -29,7 +28,7 @@ class City
     #array of all the unique animal species that a specific instance of a city has
 
     def animal_number
-        animals.count.to_i
+        animals.count
     end
     #integer that indicates the number of different animal species a city has in total
 
@@ -39,6 +38,7 @@ class City
     # array of all the cities within that country.
 
     def self.most_animals
+        binding.pry
         self.all.map{|city| city.animal_number}.max
     end
     # instance of a city that in general has the most animals - not unique
