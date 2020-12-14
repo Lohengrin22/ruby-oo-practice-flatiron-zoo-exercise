@@ -28,7 +28,7 @@ _Keep in mind that in order to properly build out the relationships between the 
 - `City.most_animals` should return an instance of a city that in general has the most animals (not unique -- so it's fine if two zoos in NYC have lions).
 
 ### Zoo Class
-- A `zoo` should be initialized with a name and address, which should be passed as string. Keep in mind that the Zoo's name should be able to change, but its address can.
+- A `zoo` should be initialized with a name and address, which should be passed as string. Keep in mind that the Zoo's name should be able to change, but its address can't.
 - `Zoo#name` should return the name of the zoo instance. 
 - `Zoo#address` should return the address of the zoo instance.
 - `Zoo.all` should return an array of all the zoo instances.

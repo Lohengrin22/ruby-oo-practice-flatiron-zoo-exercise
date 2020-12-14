@@ -1,6 +1,6 @@
-require_relative "lib/Animal.rb"
-require_relative "lib/Zoo.rb"
-require_relative "lib/City.rb"
+require_relative "LG_version_Animal.rb"
+require_relative "LG_version_Zoo.rb"
+require_relative "LG_version_City.rb"
 require 'pry'
 #If you can read this, you have the updated Readme File# - Jonathan
 
@@ -23,11 +23,16 @@ tiger = Animal.new("Tiger", "Africa", best_zoo, london)
 koala = Animal.new("Koala", "Australia", little_zoo, nyc)
 buffalo = Animal.new("Buffalo", "North America", little_zoo, paris)
 panda = Animal.new("Panda", "Asia", fancy_zoo, paris)
+lion = Animal.new("Lion", "Africa", best_zoo, nyc)
 
-
-paris.zoos
+City.most_animals
 
 
 
 binding.pry
 puts "done"
+
+#test this: ruby LG_version_run.rb
+    # best_tipped_meal = meals.max{|meal_a, meal_b| 
+    # meal_a.tip <=> meal_b.tip}
+    # best_tipped_meal.customer

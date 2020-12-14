@@ -17,7 +17,7 @@ class Zoo
 
     def animals
         my_animals = Animal.all.select{|animal| animal.zoo == self}
-        my_animals.collect{|animal| animal.species}
+        my_animals.collect{|animal| animal.species}.uniq
     end
     #return array of animals' species
 
