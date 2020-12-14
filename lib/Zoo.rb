@@ -19,7 +19,6 @@ class Zoo
         my_animals = Animal.all.select{|animal| animal.zoo == self}
         my_animals.collect{|animal| animal.species}.uniq
     end
-    #return array of animals' species
 
     def self.find_by_city(city)
         self.all.select{|zoo| zoo.address == city}

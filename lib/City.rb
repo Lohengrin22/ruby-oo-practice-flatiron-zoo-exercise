@@ -17,6 +17,8 @@ class City
         Animal.all.select{|animal| animal.city == self}
     end
 
+    #helper method
+
     def zoos
        my_animals.collect{|animal| animal.zoo}
     end
